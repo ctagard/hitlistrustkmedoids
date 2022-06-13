@@ -1,0 +1,6 @@
+/Users/coleagard/Documents/openeye/molecule-clustering/jupyter/notebooks/src/utils/rustkmedoids/target/debug/deps/crossbeam_deque-d3a127ba37bbe772.rmeta: /Users/coleagard/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-deque-0.8.1/src/lib.rs /Users/coleagard/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-deque-0.8.1/src/deque.rs
+
+/Users/coleagard/Documents/openeye/molecule-clustering/jupyter/notebooks/src/utils/rustkmedoids/target/debug/deps/crossbeam_deque-d3a127ba37bbe772.d: /Users/coleagard/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-deque-0.8.1/src/lib.rs /Users/coleagard/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-deque-0.8.1/src/deque.rs
+
+/Users/coleagard/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-deque-0.8.1/src/lib.rs:
+/Users/coleagard/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-deque-0.8.1/src/deque.rs:

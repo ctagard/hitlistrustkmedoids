@@ -1,0 +1,38 @@
+[package]
+edition = "2021"
+name = "hitlist-kmedoids"
+version = "0.0.1"
+authors = ["Erich Schubert <erich.schubert@tu-dortmund.de>", "Cole Agard <coleagard@berkeley.edu>"]
+description = "k-Medoids clustering with the FasterPAM algorithm, with and implementation for hitlist clustering"
+homepage = "https://github.com/kno10/rust-kmedoids"
+readme = "README.md"
+keywords = ["hitlist clustering", "machine-learning", "matrix", "optimization", "algorithm"]
+categories = ["science", "mathematics"]
+license = "GPL-3.0-or-later"
+repository = "https://github.com/ctagard/hitlistrustkmedoids.git"
+
+[lib]
+name = "hitlist-kmedoids"
+path = "src/mod.rs"
+test = true
+doc = true
+
+[dependencies]
+num-traits = "0.2"
+ndarray = {version = "0.15", optional = true}
+rand  = {version = "0.8", optional = true}
+rayon = {version = "1.5", optional = true}
+# crossbeam is transitive via rayon, avoid a yanked version warning:
+# with rayon-core 1.9.2 this can likely be removed
+crossbeam-utils = {version = "^0.8.8", optional = true}
+
+[dev-dependencies]
+ndarray = "0.15"
+rand  = "0.8"
+byteorder = "1.4" # for mnist-kmedoids
+
+[features]
+default = ["rand", "ndarray", "parallel"]
+parallel = ["rand", "ndarray", "rayon"]
+# Enable additional assertions
+assertions = []
