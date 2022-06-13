@@ -1,6 +1,6 @@
 [package]
 edition = "2021"
-name = "hitlist-kmedoids"
+name = "hitlistkmedoids"
 version = "0.0.1"
 authors = ["Erich Schubert <erich.schubert@tu-dortmund.de>", "Cole Agard <coleagard@berkeley.edu>"]
 description = "k-Medoids clustering with the FasterPAM algorithm, with and implementation for hitlist clustering"
