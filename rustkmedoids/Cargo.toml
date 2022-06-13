@@ -12,7 +12,7 @@ license = "GPL-3.0-or-later"
 repository = "https://github.com/ctagard/hitlistrustkmedoids.git"
 
 [lib]
-name = "hitlist-kmedoids"
+name = "hitlistkmedoids"
 path = "src/mod.rs"
 test = true
 doc = true
