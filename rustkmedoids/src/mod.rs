@@ -36,8 +36,10 @@ mod par_fasterpam;
 mod par_silhouette;
 mod silhouette;
 mod util;
+mod pam;
 
 pub use crate::fasterpam::*;
+pub use crate::pam::*;
 #[cfg(feature = "parallel")]
 pub use crate::par_fasterpam::*;
 #[cfg(feature = "parallel")]
