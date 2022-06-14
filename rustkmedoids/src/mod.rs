@@ -19,26 +19,20 @@
 //!
 //! If you use this in scientific work, please consider citing above articles.
 //!
-//! ## Example
-//!
-//! Given a dissimilarity matrix of size 4 x 4, use:
-//! ```
-//! let data = ndarray::arr2(&[[0,1,2,3],[1,0,4,5],[2,4,0,6],[3,5,6,0]]);
-//! let mut meds = kmedoids::random_initialization(4, 2, &mut rand::thread_rng());
-//! let (loss, assi, n_iter, n_swap): (f64, _, _, _) = kmedoids::fasterpam(&data, &mut meds, 100);
-//! println!("Loss is: {}", loss);
-//! ```
+
 pub mod arrayadapter;
 mod fasterpam;
 #[cfg(feature = "parallel")]
 mod par_fasterpam;
 #[cfg(feature = "parallel")]
 mod par_silhouette;
+mod initialization;
 mod silhouette;
 mod util;
 mod pam;
 
 pub use crate::fasterpam::*;
+pub use crate::initialization::*;
 pub use crate::pam::*;
 #[cfg(feature = "parallel")]
 pub use crate::par_fasterpam::*;

@@ -31,15 +31,6 @@ use std::convert::From;
 ///
 /// * panics when the dissimilarity matrix is not square
 ///
-/// ## Example
-/// Given a dissimilarity matrix of size 4 x 4, use:
-/// ```
-/// let data = ndarray::arr2(&[[0,1,2,3],[1,0,4,5],[2,4,0,6],[3,5,6,0]]);
-/// let mut meds = kmedoids::random_initialization(4, 2, &mut rand::thread_rng());
-/// let (loss, assi, n_iter): (f64, _, _) = kmedoids::alternating(&data, &mut meds, 100);
-/// let sil: f64 = kmedoids::par_silhouette(&data, &assi);
-/// println!("Silhouette is: {}", sil);
-/// ```
 #[cfg(feature = "parallel")]
 pub fn par_silhouette<M, N, L>(mat: &M, assi: &[usize]) -> L
 where

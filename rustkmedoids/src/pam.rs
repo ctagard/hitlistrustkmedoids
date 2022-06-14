@@ -31,12 +31,7 @@ use std::convert::From;
 ///
 /// ## Example
 /// Given a dissimilarity matrix of size 4 x 4, use:
-/// ```
-/// let data = ndarray::arr2(&[[0,1,2,3],[1,0,4,5],[2,4,0,6],[3,5,6,0]]);
-/// let mut meds = kmedoids::random_initialization(4, 2, &mut rand::thread_rng());
-/// let (loss, assi, n_iter, n_swap): (f64, _, _, _) = kmedoids::pam_swap(&data, &mut meds, 100);
-/// println!("Loss is: {}", loss);
-/// ```
+
 pub fn pam_swap<M, N, L>(
 	mat: &M,
 	med: &mut Vec<usize>,
@@ -76,7 +71,7 @@ where
 /// Given a dissimilarity matrix of size 4 x 4, use:
 /// ```
 /// let data = ndarray::arr2(&[[0,1,2,3],[1,0,4,5],[2,4,0,6],[3,5,6,0]]);
-/// let (loss, assi, meds): (f64, _, _) = kmedoids::pam_build(&data, 2);
+/// let (loss, assi, meds): (f64, _, _) = hitlistkmedoids::pam_build(&data, 2);
 /// println!("Loss is: {}", loss);
 /// ```
 pub fn pam_build<M, N, L>(mat: &M, k: usize) -> (L, Vec<usize>, Vec<usize>)
@@ -125,7 +120,7 @@ where
 /// Given a dissimilarity matrix of size 4 x 4, use:
 /// ```
 /// let data = ndarray::arr2(&[[0,1,2,3],[1,0,4,5],[2,4,0,6],[3,5,6,0]]);
-/// let (loss, assi, meds, n_iter, n_swap): (f64, _, _, _, _) = kmedoids::pam(&data, 2, 100);
+/// let (loss, assi, meds, n_iter, n_swap): (f64, _, _, _, _) = hitlistkmedoids::pam(&data, 2, 100);
 /// println!("Loss is: {}", loss);
 /// ```
 pub fn pam<M, N, L>(mat: &M, k: usize, maxiter: usize) -> (L, Vec<usize>, Vec<usize>, usize, usize)

@@ -31,13 +31,6 @@ use std::convert::From;
 ///
 /// ## Example
 /// Given a dissimilarity matrix of size 4 x 4, use:
-/// ```
-/// let data = ndarray::arr2(&[[0,1,2,3],[1,0,4,5],[2,4,0,6],[3,5,6,0]]);
-/// let mut meds = kmedoids::random_initialization(4, 2, &mut rand::thread_rng());
-/// let (loss, assi, n_iter): (f64, _, _) = kmedoids::alternating(&data, &mut meds, 100);
-/// let (sil, _): (f64, _) = kmedoids::silhouette(&data, &assi, false);
-/// println!("Silhouette is: {}", sil);
-/// ```
 pub fn silhouette<M, N, L>(mat: &M, assi: &[usize], samples: bool) -> (L, Vec<L>)
 where
 	N: Zero + PartialOrd + Copy,
