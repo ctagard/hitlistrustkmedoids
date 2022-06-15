@@ -30,8 +30,13 @@ mod initialization;
 mod silhouette;
 mod util;
 mod pam;
+mod fastpam1;
+mod alternating;
+
 
 pub use crate::fasterpam::*;
+pub use crate::fastpam1::*;
+pub use crate::alternating::*;
 pub use crate::initialization::*;
 pub use crate::pam::*;
 #[cfg(feature = "parallel")]
