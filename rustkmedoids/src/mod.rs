@@ -20,23 +20,23 @@
 //! If you use this in scientific work, please consider citing above articles.
 //!
 
+mod alternating;
 pub mod arrayadapter;
 mod fasterpam;
+mod fastpam1;
+mod initialization;
+mod pam;
 #[cfg(feature = "parallel")]
 mod par_fasterpam;
 #[cfg(feature = "parallel")]
 mod par_silhouette;
-mod initialization;
 mod silhouette;
 mod util;
-mod pam;
-mod fastpam1;
-mod alternating;
 
-
+pub use crate::alternating::*;
+pub use crate::arrayadapter::ArrayAdapter;
 pub use crate::fasterpam::*;
 pub use crate::fastpam1::*;
-pub use crate::alternating::*;
 pub use crate::initialization::*;
 pub use crate::pam::*;
 #[cfg(feature = "parallel")]
@@ -44,11 +44,3 @@ pub use crate::par_fasterpam::*;
 #[cfg(feature = "parallel")]
 pub use crate::par_silhouette::*;
 pub use crate::silhouette::*;
-
-pub use crate::arrayadapter::ArrayAdapter;
-pub use crate::fasterpam::*;
-pub use crate::silhouette::*;
-#[cfg(feature = "parallel")]
-pub use crate::par_fasterpam::*;
-#[cfg(feature = "parallel")]
-pub use crate::par_silhouette::*;
